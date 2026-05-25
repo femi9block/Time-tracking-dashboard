@@ -1,26 +1,38 @@
+
 export default function ActivityCard({
-    backgroundIcon,
     activity,
+    current,
+    backgroundIcon,
+    previous
 
 }) {
     return(
         <div className="activityCard-container">
             <div className="activityCard-background">
-                <span>
+                <span className="backgroundIcon">
                     <img 
-                    src={backgroundIcon}/>
+                    src={backgroundIcon}
+                    alt="activityCard Icon"
+                    height={50}
+                    width={50}/>
 
                 </span>
 
             </div>
-            <div>
-                <div>
-                <p>{activity}</p>
-                <span>
+            <div className="activityData-Container">
+                <div className="activityCard-title">
+                <p className="activity">{activity}</p>
+                <span className="activity-more">
                     ...
                 </span>
-
                 </div>
+
+                <div className="activityType">
+
+                    <h2 className="currentTime-spent">{current}</h2>
+                    <p className="lastWeek-timeSpent">Last Week -{previous}</p>
+                </div>
+
                 
             </div>
 

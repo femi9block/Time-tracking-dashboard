@@ -1,0 +1,14 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 90px;
+    
+
+
+}

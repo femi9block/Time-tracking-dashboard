@@ -5,7 +5,9 @@ export default function ProfileCard({
     daily,
     weekly,
     monthly,
-    onClick
+    setPeriod,
+    period
+
 }) {
     return(
         <div className="profile-container">
@@ -21,16 +23,16 @@ export default function ProfileCard({
 
             <p>{title}</p>
             <h1>{profileName}</h1>
-
+ 
             </div>
             <div className="profile-buttons">
-            <button className="daily-button" onClick={onClick}>
+            <button className={period === "daily" ? "active" : "button" } onClick={()=>setPeriod('daily')}>
                 {daily}
             </button>
-            <button className="weekly-button" onClick={onClick}>
+            <button className={period === "weekly" ? "active" : "button" } onClick={()=>setPeriod("weekly")}>
                 {weekly}
             </button>
-            <button className="monthly-button" onClick={onClick}>
+            <button className={period === "monthly" ? "active" : "button" } onClick={()=>setPeriod('monthly')}>
                 {monthly}
             </button>
             </div>
