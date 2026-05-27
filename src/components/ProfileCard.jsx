@@ -12,17 +12,19 @@ export default function ProfileCard({
     return(
         <div className="profile-container">
             <div className="profile-content">
-                <span>
             <img 
             src={icon}
             alt="Profile Icon"
             width={70}
             height={70}
-            className="profile-icon"/>
-                </span>
+            className="profile-icon"
+            />
+        
+            <div className="profile-info">
+            <p className="profile-title-text">{title}</p>
+            <h1 className="profile-name-text">{profileName}</h1>
 
-            <p>{title}</p>
-            <h1>{profileName}</h1>
+            </div>
  
             </div>
             <div className="profile-buttons">

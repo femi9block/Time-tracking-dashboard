@@ -17,6 +17,7 @@ export default function Dashboard() {
     
     return(
         <div className='dashboard'>
+            <div className='grid-container'>
             <ProfileCard
             icon={icon}
             profileName = {profileName}
@@ -27,14 +28,15 @@ export default function Dashboard() {
             period={period}
             setPeriod = {setPeriod}
              />
-             <div className='grid-container'>
+             
              {data.map((item) => (
                  <ActivityCard 
                  key={item.title}
                  activity = {item.title}
                  current={item.timeframes[period].current}
                  previous={item.timeframes[period].previous}
-                 backgroundIcon = {item.cardStyle.icon}
+                 bgIcon = {item.cardStyle.bgIcon}
+                 bgColor={item.cardStyle.bgColor}
                  period ={period}
                  
                  />

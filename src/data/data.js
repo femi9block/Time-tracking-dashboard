@@ -3,7 +3,7 @@ import studyIcon from '../assets/images/icon-study.svg'
 import exerciseIcon from '../assets/images/icon-exercise.svg'
 import playIcon from '../assets/images/icon-play.svg'
 import selfCareIcon from '../assets/images/icon-self-care.svg'
-import socialIcon from '../assets/images/icon-self-care.svg'
+import socialIcon from '../assets/images/icon-social.svg'
 import ellipsis from '../assets/images/icon-ellipsis.svg'
   
 const data = [
@@ -24,8 +24,8 @@ const data = [
         }
       },
       cardStyle:{
-        "bgColor": "coral",
-        icon: "workIcon"
+        bgColor: "coral",
+        bgIcon: workIcon
       }
     },
     {
@@ -46,7 +46,7 @@ const data = [
       },
       cardStyle: {
         bgColor:"skyBlue",
-        icon: "playIcon"
+        bgIcon: playIcon
       }
     },
     {
@@ -67,7 +67,7 @@ const data = [
       },
       cardStyle:{
         bgColor: "rose",
-        icon: "studyIcon"
+        bgIcon: studyIcon
       }
     },
     {
@@ -88,7 +88,7 @@ const data = [
       },
       cardStyle:{
         bgColor: "emerald",
-        icon: "exerciseIcon"
+        bgIcon: exerciseIcon
       }
     },
     {
@@ -109,7 +109,7 @@ const data = [
       },
       cardStyle:{
         bgColor: "violet",
-        icon: "socialIcon"
+        bgIcon: socialIcon
       }
     },
     {
@@ -130,7 +130,7 @@ const data = [
       },
       cardStyle:{
         bgColor: "gold",
-        icon: "selfCareIcon"
+        bgIcon: selfCareIcon
       }
     }
   ]
