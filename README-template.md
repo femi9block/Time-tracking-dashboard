@@ -1,6 +1,9 @@
 # Frontend Mentor - Time tracking dashboard solution
 
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution to the Time Tracking Dashboard challenge on Frontend Mentor (https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
+The challenge focuses on building an interactive dashboard interface with responsive layouts and dynamic data updates using modern frontend technologies.
+
+Frontend Mentor challenges provide practical opportunities to improve frontend development skills by building realistic projects from professional UI designs.
 
 ## Table of contents
 
@@ -17,7 +20,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,15 +33,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+### Desktop View
+![Desktop view](./screenshots/time-tracker-dashboard-desktop.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+### Mobile View
+![Light View](./screenshots/time-tracker-dashboard-mobile.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -49,75 +48,101 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ## My process
 
 ### Built with
-
+- React
+- Vite
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+One major concept I learned was dynamic property access using square bracket notation. Instead of writing multiple conditional statements for Daily, Weekly, and Monthly data, I used dynamic object access to render the selected timeframe efficiently.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+ {data.map((item) => (
+                 <ActivityCard 
+                 key={item.title}
+                 activity = {item.title}
+                 current={item.timeframes[period].current}
+                 previous={item.timeframes[period].previous}
+                 bgIcon = {item.cardStyle.bgIcon}
+                 bgColor={item.cardStyle.bgColor}
+                 period ={period}
+                 
+                 />
+                ))}
+
+             </div>
 ```
+I also improved my understanding of:
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- Reusable React components
+- Mapping through arrays of objects
+- State-driven UI updates using useState
+- Passing data through props
+- CSS positioning (relative and absolute)
+- Grid layouts and properties such as grid-row: span
+- Creating layered card layouts with overlapping elements
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+One particularly interesting challenge was building the stacked card design while maintaining proper spacing and responsiveness. 
+
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Going forward, I would like to continue improving in the following areas:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Advanced responsive design techniques
+- Component reusability and architecture
+- CSS positioning and layout systems
+- State management patterns in React
+- Accessibility best practices
+- Cleaner and more scalable CSS organization
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- Frontend Mentor - For providing the challenge design and requirements
+- React Documentation - Helpful for understanding component structure and state management
+- MDN Web Docs - Useful reference for CSS and JavaScript concepts
+ChatGPT - Assisted with debugging, layout explanations, and development guidance 
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+During this project, I used ChatGPT as a learning and debugging assistant throughout the development process.
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+How I Used AI
+- Debugging layout and positioning issues
+- Understanding React props and state management
+- Learning dynamic property access
+- Improving CSS Grid and Flexbox layouts
+- Troubleshooting component structure problems
+- Improving project documentation and commit messages
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+What Worked Well
+AI assistance was particularly helpful in:
+
+- Explaining difficult CSS positioning behavior
+- Understanding reusable component structures
+- Simplifying complex layout issues
+- Providing alternative approaches to solving UI problems
+
+### Key Takeaway
+
+Rather than copying solutions directly, I used AI primarily as a collaborative learning tool to better understand concepts and improve my problem-solving process.
+
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- github - https://github.com/femi9block
+- Frontend Mentor - (https://www.frontendmentor.io/profile/femi9block)
+- Twitter - (https://www.twitter.com/johnifawoye)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
+I thank God for the grace and strength to complete this project. The process came with several learning curves and moments of challenge, but it also became a valuable opportunity for growth and improvement in frontend development.
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I am also grateful to the Frontend Mentor community and learning resources that continue to make practical frontend development more accessible. 
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
